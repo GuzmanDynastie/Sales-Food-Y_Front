@@ -29,8 +29,8 @@ const TypeRepository = {
   },
 
   remove: async ({ id }: DeleteType): Promise<GetTypeById> => {
-    const res = api.delete(`/types/${id}`);
-    return (await res).data;
+    const res = await api.delete(`/types/${id}`);
+    return res.data;
   },
 };
 
