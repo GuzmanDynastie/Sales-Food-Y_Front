@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import typeService from "@/services/typeService";
 import type {
-  DeleteType,
-  GetAllTypes,
-  GetTypeById,
   NewType,
   UpdateType,
+  GetTypeById,
+  GetAllTypes,
+  DeleteType,
 } from "@/types/Type";
 
 export function useTypes() {
@@ -101,7 +101,7 @@ export function useDeleteType() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const deleteType = async (id: number): Promise<GetTypeById | null> => {
+  const deleteType = async (id: number): Promise<DeleteType | null> => {
     setLoading(true);
     setError(null);
     try {

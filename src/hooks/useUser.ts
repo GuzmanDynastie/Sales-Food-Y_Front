@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import userService from "@/services/userService";
 import type {
-  DeleteUser,
-  GetAllUsers,
-  GetUserById,
   NewUser,
   UpdateUser,
+  GetUserById,
+  GetAllUsers,
+  DeleteUser,
 } from "@/types/User";
 
 export function useUsers() {
